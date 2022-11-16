@@ -66,6 +66,8 @@ func (r *ConfigReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctr
 		operatorConfig.Status.InstallerStatus = installerv1alpha1.InstallerStatusTypePending
 	}
 
+	log.Info("SJE: " + operatorConfig.Status.InstallerStatus.String())
+
 	switch operatorConfig.Status.InstallerStatus {
 	case installerv1alpha1.InstallerStatusTypePending:
 		operatorConfig.Status.InstallerStatus = installerv1alpha1.InstallerStatusTypeRunning

@@ -8,8 +8,9 @@ metadata:
     app.kuberentes.io/managed-by: kustomize
     app.kubernetes.io/created-by: gitpod
   name: config-sample
+  namespace: gitpod
 spec:
   installerImage: eu.gcr.io/gitpod-core-dev/build/installer:release-2022.10.0.16
   useExperimentalConfig: false
   installerConfig:
-    domain: gitpod.io
+    domain: k3s.gitpod.simonemms.com
